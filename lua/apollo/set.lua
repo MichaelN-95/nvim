@@ -15,3 +15,6 @@ vim.opt.showmode = false
 vim.opt.showcmd = true
 -- highlight line
 vim.opt.cursorline = true
+
+-- hide netrw banner
+vim.g.netrw_banner = 0
