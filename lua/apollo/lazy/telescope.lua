@@ -10,9 +10,7 @@ return {
     config = function()
         require('telescope').setup({
             defaults = {
-                vimgrep_arguments = {
-                    '--glob', '!assets/vendor/*',
-                }
+                file_ignore_patterns = { "node_modules", ".git", "heroicons" },
             }
         })
 
@@ -31,5 +29,7 @@ return {
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+        -- live grep
+        vim.keymap.set('n', '<leader>lg', builtin.live_grep, {})
     end
 }
