@@ -9,7 +9,7 @@ vim.keymap.set("n", "<leader>tt", ":vnew +term<CR>")
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")
 
 -- easy close
-vim.keymap.set("n", "<leader>q", ":q<CR>")
+vim.keymap.set("n", "<leader>C-c", "<Esc>")
 -- Trouble
 vim.keymap.set("n", "<leader>xx", function() require("trouble").toggle() end)
 vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
@@ -20,3 +20,6 @@ vim.keymap.set("n", "gR", function() require("trouble").toggle("lsp_references")
 
 -- remap to select whole buffer and copy to clipboard
 vim.keymap.set("n", "<leader>yy", ":%y+<CR>")
+
+-- command to open this file in a modal window preview
+vim.keymap.set("n", "<leader>r", ":vsplit ~/.config/nvim/lua/apollo/remap.lua<CR>")
